@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 	$(document).on("keydown", backgroundChange)
+	$("#playerm").css("background-color", "white")
 	function backgroundChange(event) {
 		console.log("3")
 		if (event.keyCode === 38) {
@@ -11,6 +12,7 @@ $(document).ready(function(){
 	    	$("#playerm").css("background-color", "transparent")
 	    } else {
 	    	$("#playermu").css("background-color", "none")
+	    	$("#playerm").css("background-color", "white")
 	    }
 	}
 	$(document).on("keyup", backgroundChangeBack)

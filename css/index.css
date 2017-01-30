@@ -38,7 +38,6 @@ h2 {
 	height: 33.33%;
 	display: block;
 	background-color: rgba(0, 0, 0, 0);
-	border-bottom: 0.1px solid black;
 	float: left;
 }
 
@@ -47,7 +46,6 @@ h2 {
 	height: 100%;
 	display: block;
 	background-color: rgba(0, 0, 0, 0);
-	border: 0.1px solid black;
 	float: left;
 }
 
