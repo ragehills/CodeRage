@@ -24,13 +24,13 @@ h2 {
 #gameBoard {
 	width: 80vw;
 	height: 70vh;
-	background-color: #837073;
 	position: absolute;
 	top: 13vh;
 	right: 8vw;
 	left: 8vw;
 	border: 2px solid white;
 	background-image: url(https://s-media-cache-ak0.pinimg.com/originals/25/2a/6e/252a6e8c27ec363de26492ba6234f509.jpg);
+    z-index: -1;
 
 }
 
@@ -47,4 +47,15 @@ h2 {
 	display: inline;
 	background-color: rgba(0, 0, 0, 0);
 }
+
+.row1 #column1 {
+	/*background-image: url("https://s-media-cache-ak0.pinimg.com/736x/08/b5/08/08b508f1204d3633bb22bfbaa9d917bc.jpg");*/
+	position: absolute;
+    height: 33.33%;
+    width: 10%;
+    z-index: +1;
+    max-width: 100%;
+    max-height: 100%;
+}
+
 
