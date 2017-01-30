@@ -1,20 +1,29 @@
 $(document).ready(function(){
-// var e = jQuery.Event("keyup");
-// e.which = 38; // up key
-// // e.which = 40; // down key
-// $("#playermd").css("background-color", "white");
-// $("#playermu").css("background-color", "white");
-// $("#playerm").css("background-color", "black");
-// });
 
-var moveUp = document.getElementById("playermu");
-var moveDown = document.getElementById("playermd");
-var originalP = document.getElementById("playerm");
-var keyDown = Event.keyCode()
-
-	if (keyDown == 38) {
-	    $("#playermu").css("background-color", "white")
-	} else if (keyDown == 40) {
-	    $("#playermd").css("background-color", "white")
+	$(document).on("keydown", backgroundChange)
+	function backgroundChange(event) {
+		console.log("3")
+		if (event.keyCode === 38) {
+	    	$("#playermu").css("background-color", "white")
+	    	$("#playerm").css("background-color", "transparent")
+	    } else if (event.keyCode === 40) {
+	    	$("#playermd").css("background-color", "white")
+	    	$("#playerm").css("background-color", "transparent")
+	    } else {
+	    	$("#playermu").css("background-color", "none")
+	    }
+	}
+	$(document).on("keyup", backgroundChangeBack)
+	function backgroundChangeBack(event) {
+		console.log("4")
+		if (event.keyCode === 38) {
+			$("#playerm").css("background-color", "white")
+			$("#playermu").css("background-color", "transparent")
+	    } else if (event.keyCode === 40) {
+	    	$("#playerm").css("background-color", "white")
+	    	$("#playermd").css("background-color", "transparent")
+	    } else {
+			$("#playermd").css("background-color", "none")
+	    }
 	}
 });
