@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/index.css">
 <link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 	<title>CodeRAGE</title>
 </head>
@@ -10,43 +11,46 @@
 	<div id="title">
 		<h2>CodeRAGE</h2>
 	</div>
-	<table id="gameBoard" cellspacing="0">
-		<tr class="row1">
-			<th id="column1"></th>
-			<th id="column2"></th>
-			<th id="column3"></th>
-			<th id="column4"></th>
-			<th id="column5"></th>
-			<th id="column6"></th>
-			<th id="column7"></th>
-			<th id="column8"></th>
-			<th id="column9"></th>
-			<th id="column10"></th>
-		</tr>
-		<tr class="row2">
-			<th id="column1"></th>
-			<th id="column2"></th>
-			<th id="column3"></th>
-			<th id="column4"></th>
-			<th id="column5"></th>
-			<th id="column6"></th>
-			<th id="column7"></th>
-			<th id="column8"></th>
-			<th id="column9"></th>
-			<th id="column10"></th>
-		</tr>
-		<tr class="row3">
-			<th id="column1"></th>
-			<th id="column2"></th>
-			<th id="column3"></th>
-			<th id="column4"></th>
-			<th id="column5"></th>
-			<th id="column6"></th>
-			<th id="column7"></th>
-			<th id="column8"></th>
-			<th id="column9"></th>
-			<th id="column10"></th>
-		</tr>
-	</table>
+	<div id="gameBoard" cellspacing="0">
+		<ul class="row" id="1">
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column" id="playermu"></li>
+		</ul>
+		<ul class="row" id="2">
+			<li class="column" id="comp"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column" id="playerm"></li>
+		</ul>
+		<ul class="row" id="3">
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column"></li>
+			<li class="column" id="playermd"></li>
+		</ul>
+		<marquee>
+		Welcome to CodeRAGE press "up" or "down" on your keyboard to dodge the Codebricks!
+	</marquee>
+	</div>
 </body>
 </html>

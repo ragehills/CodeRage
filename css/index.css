@@ -28,34 +28,41 @@ h2 {
 	top: 13vh;
 	right: 8vw;
 	left: 8vw;
-	border: 2px solid white;
 	background-image: url(https://s-media-cache-ak0.pinimg.com/originals/25/2a/6e/252a6e8c27ec363de26492ba6234f509.jpg);
     z-index: -1;
 
 }
 
-.row1, .row2, .row3 {
-	width: 99.99%;
+.row {
+	width: 100%;
 	height: 33.33%;
 	display: block;
 	background-color: rgba(0, 0, 0, 0);
+	border-bottom: 0.1px solid black;
+	float: left;
 }
 
-#column1, #column2, #column3, #column4, #column5, #column6, #column7, #column8, #column9, #column10{
-	width: 9.6%;
-	height: 99.99%;
-	display: inline;
+.column {
+	width: 9.66%;
+	height: 100%;
+	display: block;
 	background-color: rgba(0, 0, 0, 0);
+	border: 0.1px solid black;
+	float: left;
 }
 
-.row1 #column1 {
-	/*background-image: url("https://s-media-cache-ak0.pinimg.com/736x/08/b5/08/08b508f1204d3633bb22bfbaa9d917bc.jpg");*/
+marquee {
+	padding-top: 10px;
+	z-index: +2;
+	color: #C6B5B8;
+}
+
+/*#comp, #playerm {
 	position: absolute;
     height: 33.33%;
-    width: 10%;
+    width: 9%;
     z-index: +1;
     max-width: 100%;
     max-height: 100%;
-}
-
-
+    background-color: white;
+}*/
