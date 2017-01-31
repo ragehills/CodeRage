@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	var start = $(".row#2").offset().left;
 	var playerMove = ''
+	var finish = $("#g8").offset().left;
 
 	$(document).on("keydown", backgroundChange)
 	$("#playerm").css("background-color", "white")
@@ -42,9 +43,9 @@ $(document).ready(function(){
 	    }
 	};
 
-	// Bullet animation
+	// Bullet animation & refire
 	$(document).on("click", function() {
-		var finish = $("#g8").offset().left;
+		
 		setInterval(function() {
 			$(".bullet").css({left: start}).animate({left: finish}, 1000);
 
@@ -58,8 +59,6 @@ $(document).ready(function(){
 			
 			}, 850);
 		}, 2000);
-
-
 	});
 	
 
