@@ -55,6 +55,15 @@ marquee {
 	color: #C6B5B8;
 }
 
+
+li.bullet {
+	position: absolute;
+	left: 0;
+	vertical-align: middle;
+	background-color: green;
+	height: 50px;
+	width: 50px;
+}
 /*#comp, #playerm {
 	position: absolute;
     height: 33.33%;

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	var start = $(".row#2").offset().left;
 
 	$(document).on("keydown", backgroundChange)
 	$("#playerm").css("background-color", "white")
@@ -28,4 +29,19 @@ $(document).ready(function(){
 			$("#playermd").css("background-color", "none")
 	    }
 	}
+	$(document).on("keydown", function() {
+		var finish = $("#g8").offset().left;
+		$(".bullet").css({left: start}).animate({left: finish}, 1000);
+
+		setTimeout(function() {
+			console.log("made it to the person");
+		}, 850);
+
+	})
+	
+
+	// setInterval(function(){$("#g1").css("background-color", "red")}, 2000);
+	// setInterval(function(){$("#g1").css("background-color", "transparent")}, 375);
+	// setInterval(function(){$("#g2").css("background-color", "red")}, 2200);
+	// setInterval(function(){$("#g2").css("background-color", "transparent")}, 575);
 });
