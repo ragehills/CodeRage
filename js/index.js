@@ -15,7 +15,8 @@ $(document).ready(function(){
 	    	$("#playermu").css("background-color", "none")
 	    	$("#playerm").css("background-color", "white")
 	    }
-	}
+	};
+
 	$(document).on("keyup", backgroundChangeBack)
 	function backgroundChangeBack(event) {
 		console.log("4")
@@ -28,8 +29,9 @@ $(document).ready(function(){
 	    } else {
 			$("#playermd").css("background-color", "none")
 	    }
-	}
-	$(document).on("keydown", function() {
+	};
+
+	$(document).on("click", function() {
 		var finish = $("#g8").offset().left;
 		$(".bullet").css({left: start}).animate({left: finish}, 1000);
 
@@ -37,11 +39,10 @@ $(document).ready(function(){
 			console.log("made it to the person");
 		}, 850);
 
-	})
-	
+	});
 
-	// setInterval(function(){$("#g1").css("background-color", "red")}, 2000);
-	// setInterval(function(){$("#g1").css("background-color", "transparent")}, 375);
-	// setInterval(function(){$("#g2").css("background-color", "red")}, 2200);
-	// setInterval(function(){$("#g2").css("background-color", "transparent")}, 575);
+	$(document).on("keydown", startCount);
+	$(document).on("keyup", startScore);
+
+	
 });
