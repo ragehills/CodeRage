@@ -1,4 +1,10 @@
 $(document).ready(function(){
+	// $( ".startGame" ).();
+	$( ".gamePage" ).hide();
+	$( ".gameLoss" ).hide();
+	$("#startGameB").click()
+  		// $(".startGame").hide();
+  		// $(".gamePage").show();
 	var start = $(".row#2").offset().left;
 	var playerMove = ''
 	var finish = $("#g8").offset().left;
