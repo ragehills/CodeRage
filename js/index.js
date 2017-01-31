@@ -45,17 +45,19 @@ $(document).ready(function(){
 	// Bullet animation
 	$(document).on("click", function() {
 		var finish = $("#g8").offset().left;
-		$(".bullet").css({left: start}).animate({left: finish}, 1000);
-
 		setInterval(function() {
-			console.log("made it to the person");
-			if (playerMove !== 'middle') {
-				console.log("You have Dodged!")
-			} else {
-				console.log("you need to make a move")
-			}
-		
-		}, 850);
+			$(".bullet").css({left: start}).animate({left: finish}, 1000);
+
+			setTimeout(function() {
+				console.log("made it to the person");
+				if (playerMove !== 'middle') {
+					console.log("You have Dodged!")
+				} else {
+					alert("GameOver!")
+				}
+			
+			}, 850);
+		}, 2000);
 
 
 	});
