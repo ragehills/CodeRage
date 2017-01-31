@@ -60,8 +60,8 @@ $(document).ready(function(){
 					if (playerMove !== 'middle') {
 						console.log("You have Dodged!")
 					} else {
-						$(".gamePage").slideUp();
-	  					$(".gameLoss").show(1000);
+						$(".gamePage").hide(1000);
+	  					$(".gameLoss").show();
 					}
 				}, 850);
 			}, 2000);

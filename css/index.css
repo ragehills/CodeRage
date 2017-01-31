@@ -51,6 +51,8 @@ h2 {
 }
 
 marquee {
+	position: absolute;
+	bottom: 5vh;
 	padding-top: 10px;
 	z-index: +2;
 	color: #C6B5B8;
@@ -73,7 +75,7 @@ li.bullet {
 	display: inline-block;
 }
 
-#gameTitle {
+#gameTitle, #lossTitle{
 	font-size: 2em;
 	width: 100%;
 	height: 100%;
@@ -85,7 +87,7 @@ li.bullet {
 	bottom: 35vh;
 }
 
-#startGameB, .replay {
+#startGameB, #replay {
 	position: absolute;
 	top: 60vh;
 	right: 40vw;
@@ -94,6 +96,8 @@ li.bullet {
 	width: 20vw;
 	display: inline-block;
 }
+
+
 /*#comp, #playerm {
 	position: absolute;
     height: 33.33%;
