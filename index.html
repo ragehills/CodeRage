@@ -9,15 +9,29 @@
 </head>
 <body>
 	<div class="startGame">
-		<h1 id="gameTitle">CodeRAGE</h1>
-		<input type="button" name="startGame" id="startGameB" value="Start Game">
+		<!-- <h1 id="gameTitle">CodeRAGE</h1> -->
+		<div id="ffPage">
+			<p id="green">Game name<span id="white"> = </span><span id="yellow">"CodeRage"</span></p>
+			
+			<br><p id="blue">function<span id="green"> startGame</span><span id="white">(</span><span id="orange">click, button</span><span id="white">)</span></p>
+			
+			<br><p class="if" id="red">if<span id="white"> (ready) {</span></p>
+
+			<br><p class="st" id="orange">this.<span id="white">press</span></p>
+			
+			<br><p class="if" id="red">} else if <span id="white">(player<span id="red"> === </span><span id="yellow">"not.ready"</span><span id="white">)</span><span id="white"> {</p>
+
+			<br><p class="st" id="blue">close.page()</p>
+		</div>
+
+		<input type="button" name="startGame" id="startGameB" value="this.press">
 		<marquee>
 			Welcome to CodeRAGE, Press "up" or "down" on your keyboard to dodge the Codebricks! When you are ready click start!
 		</marquee>
 	</div>
 	<div class="gamePage">
 		<div id="title">
-			<h2>CodeRAGE</h2>
+			<h2>Welcome To CodeRAGE</h2>
 		</div>
 		<div id="gameBoard" cellspacing="0">
 			<ul class="row" id="1">
@@ -61,7 +75,7 @@
 	</div>
 	<div class="gameLoss">
 		<h1 id="lossTitle">Better Luck Next Time!</h1>
-		<input type="button" name="replayGame" id="replay" value="Replay Game">
+		<input type="submit" name="replayGame" id="replay" value="Replay Game">
 	</div>
 </body>
 </html>

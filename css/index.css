@@ -3,7 +3,7 @@ body {
 	background-color: #1B1818;
 	height: 100vh;
 	width:100vw;
-	font-family: "Helvetica";
+	font-family: "Menlo-regular", "Helvetica";
 }
 
 #title {
@@ -12,13 +12,12 @@ body {
 	position: absolute;
 	text-align: center;
 	padding-top: 5vh;
-	font-size: 2em;
-	font-weight: 900;
 }
 
 h2 {
-	width: 100%;
-	height: 100%;
+	font-size: 1em;
+	font-family: "Menlo-regular";
+	font-weight: normal;
 	color: #C6B5B8;
 }
 
@@ -68,35 +67,81 @@ li.bullet {
 	width: 50px;
 }
 
+/*Divs for start menu and loss menu*/
 .startGame, .gameLoss{
 	background-color: #000000;
 	height: 100vh;
-	width:100vw;
-	display: inline-block;
+	width: 100vw;
+	color: white;
 }
 
-#gameTitle, #lossTitle{
+/*h1 for start menu and loss menu*/
+/*#gameTitle, */
+#lossTitle, #ffPage{
+	font-family: "Menlo-regular"
 	font-size: 2em;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	color: #C6B5B8;
 	display: inline-block;
-	text-align: center;
+	text-align: left;
 	position: absolute;
 	top: 30vh;
+	right: 35vw;
 	bottom: 35vh;
+	left: 40vw;
 }
 
+/*Buttons start menu and loss menu*/
 #startGameB, #replay {
+	font-family: "Menlo-regular"
+	font-size: 2em;
+	border: 0;
+	border: 2em;
 	position: absolute;
 	top: 60vh;
 	right: 40vw;
 	bottom: 30vh;
 	left: 40vw;
 	width: 20vw;
+	height: 5vw;
 	display: inline-block;
+	border-radius: 12.5%;
 }
 
+#green {
+	color: #99CC99;
+}
+
+#white {
+	color: white;
+}
+
+#blue {
+	color: #66CCCC;
+}
+
+#red {
+	color: #F2777A;
+}
+
+#yellow {
+	color: #FFCC66;
+}
+
+#orange {
+	color: #F99157;
+}
+
+.if {
+	padding-left: 2.5vw;
+	padding-right: 37.5vw;
+}
+
+.st {
+	padding-left: 5vw;
+	padding-right: 35vw;
+}
 
 /*#comp, #playerm {
 	position: absolute;
