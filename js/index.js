@@ -6,9 +6,9 @@ $(document).ready(function(){
   		$(".gamePage").show();
 
   		var time = timeU - timeD;
-  		var timeD = " ";
-  		var timeU = " ";
-  		console.log(time);
+  		var timeD = 0;
+  		var timeU = 0;
+  		// console.log(time);
 		var start = $(".row#2").offset().left;
 		var playerMove = 'middle'
 		var finish = $("#g8").offset().left;
@@ -73,6 +73,10 @@ $(document).ready(function(){
 						score++;
 						// console.log(score);
 						$('#score').text(score);
+					// } else if (time >= 501) {
+					// 	$(".gamePage").hide(1000);
+	  				//	$(".gameLoss").show();
+	  				// 	$('.scoreBoard').text(score);
 					} else {
 						$(".gamePage").hide(1000);
 	  					$(".gameLoss").show();
