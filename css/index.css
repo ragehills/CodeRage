@@ -61,6 +61,7 @@ li.bullet {
 	background-size: auto;
 	background-repeat: no-repeat;
 	background-image: cover;
+	margin-top: 7.5vh;
 }
 
 .startGame, .gameLoss{
