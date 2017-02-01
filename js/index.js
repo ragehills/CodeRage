@@ -5,6 +5,8 @@ $(document).ready(function(){
   		$(".startGame").slideUp();
   		$(".gamePage").show();
 
+  		var time = new Date().getTime();
+  		console.log(time);
 		var start = $(".row#2").offset().left;
 		var playerMove = 'middle'
 		var finish = $("#g8").offset().left;
@@ -25,6 +27,8 @@ $(document).ready(function(){
 		    	$("#playermd").css("background-color", "white")
 		    	$("#playerm").css("background-color", "transparent")
 		    	playerMove = 'down'
+		    } else if (event.keyCode === 40 && event.keyCode === 38) {
+		    	playerMove = 'middle'
 		    } else {
 		    	$("#playermu").css("background-color", "transparent")
 		    	$("#playerm").css("background-color", "white")
