@@ -178,3 +178,7 @@ a:link, a:visited, a:hover, a:active {
 #playerm, #playermu {
 	margin-top: 20vh;
 }
+
+#pageTurn, #jumpSound, #bulletSound, #spin, #hit {
+	display: none;
+}

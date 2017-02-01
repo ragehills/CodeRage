@@ -13,7 +13,7 @@ $(document).ready(function(){
 	function startGame() {
 		$(".startGame").slideUp();
   		$(".gamePage").show();
-
+  		document.getElementById('pageTurn').play()
 
 		$(document).on("keydown", backgroundChange)
 		$(document).on("keyup", backgroundChangeBack)
@@ -32,10 +32,12 @@ $(document).ready(function(){
 			$("#idle").hide()
 			$("#playermu").show()
 	    	playerMove = 'up'
+	    	document.getElementById('jumpSound').play()
 	    } else if (event.keyCode === 40) {
 	    	$("#idle").hide()
 			$("#playermd").show()
 	    	playerMove = 'down'
+	    	document.getElementById('jumpSound').play()
 	    } else {
 	    	$("#idle").show()
 	    	playerMove = 'middle'
@@ -71,6 +73,7 @@ $(document).ready(function(){
 					$("#idle").hide()
 					$("#playermd").hide()
 					$("#playermu").hide()
+					document.getElementById('spin').play()
 					endGame();
 				}
 			}, 800);
@@ -79,13 +82,16 @@ $(document).ready(function(){
 
 	function endGame() {
 		dead = true;
+		// $(fireBullet).stop()
+		// $(fireBullet).clearQueue()
 		$(document).off("keydown");
 		$(".gamePage").hide(1000);
-  		$(".gameLoss").show();
+  		$(".gameLoss").show(1000);
   		$('.scoreBoard').text(score);
   		$("#dizzy").show()
 		$("#idle").hide()
 		$("#playermd").hide()
 		$("#playermu").hide()
+		$(".bullet").stop('fireBullet')
 }
 });
