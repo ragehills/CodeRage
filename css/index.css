@@ -28,7 +28,7 @@ h2 {
 	top: 13vh;
 	right: 8vw;
 	left: 8vw;
-	background-image: url(https://s-media-cache-ak0.pinimg.com/originals/25/2a/6e/252a6e8c27ec363de26492ba6234f509.jpg);
+	background-image: url("../images/gameBackground.png");
     z-index: -1;
 
 }
