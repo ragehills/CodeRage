@@ -166,6 +166,14 @@ a:active {
 	padding-right: 35vw;
 }
 
+.scoreBoard {
+	text-align: left;
+	position: absolute;
+	top: 35vh;
+	bottom: 60vh;
+	left: 47.5vw;
+}
+
 /*#comp, #playerm {
 	position: absolute;
     height: 33.33%;

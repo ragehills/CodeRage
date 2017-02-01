@@ -67,6 +67,7 @@ $(document).ready(function(){
 					} else {
 						$(".gamePage").hide(1000);
 	  					$(".gameLoss").show();
+	  					$('.scoreBoard').text(score);
 					}
 				}, 850);
 			}, 2000);
