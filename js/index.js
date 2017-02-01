@@ -3,6 +3,7 @@ $(document).ready(function(){
 	$( ".gameLoss" ).hide();
 	var playerMove = 'middle';
 	var score = 0;
+	var dead = false;
 	var timer;
 	$("#startGameB").click(startGame);
 	$("#replayGameB").click(function() {
@@ -44,10 +45,13 @@ $(document).ready(function(){
 			// players move back
 	function backgroundChangeBack() {
 		clearTimeout(timer);
+		if (!dead) {
+			$("#idle").show()
+			$("#playermd").hide()
+			$("#playermu").hide()
+		}
 		playerMove = 'middle';
-		$("#idle").show()
-		$("#playermd").hide()
-		$("#playermu").hide()
+
 	};
 
 	function fireBullet() {
@@ -72,6 +76,8 @@ $(document).ready(function(){
 	};
 
 	function endGame() {
+		dead = true;
+		$(document).off("keydown");
 		$(".gamePage").hide(1000);
   		$(".gameLoss").show();
   		$('.scoreBoard').text(score);
