@@ -56,19 +56,19 @@ li.bullet {
 	left: 0;
 	vertical-align: middle;
 	/*background-image: url("../images/codeBullet.png");*/
-	height: 30px;
-	width: 120px;
+	height: 15px;
+	width: 60px;
 	/*background-repeat: no-repeat;
 	background-size: cover;*/
-	margin-top: 17vh;
-	/*border-radius: 5%;*/
-	background-position: center;
+	margin-top: 25vh;
 	z-index: 0;
 }
 
 #bullet {
 	position: relative;
 	z-index: 0;
+	height: 15px;
+	width: 60px;
 }
 
 .startGame, .gameLoss{
@@ -169,4 +169,12 @@ a:link, a:visited, a:hover, a:active {
 #dizzy {
 	position: relative;
 	z-index: +3;
+}
+
+#playermd {
+	margin-top: 10vh;
+}
+
+#playerm, #playermu {
+	margin-top: 20vh;
 }
