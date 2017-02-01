@@ -8,10 +8,11 @@ $(document).ready(function(){
 		var start = $(".row#2").offset().left;
 		var playerMove = 'middle'
 		var finish = $("#g8").offset().left;
+		var score = 0
 
 		$(document).on("keydown", backgroundChange)
 		$("#playerm").css("background-color", "white")
-		
+
 		// players move
 		function backgroundChange(event) {
 			//start timer
@@ -60,7 +61,9 @@ $(document).ready(function(){
 				setTimeout(function() {
 					// console.log("made it to the person");
 					if (playerMove !== 'middle') {
-						// console.log("You have Dodged!")
+						score++;
+						// console.log(score);
+						$('#score').text(score);
 					} else {
 						$(".gamePage").hide(1000);
 	  					$(".gameLoss").show();
@@ -68,13 +71,8 @@ $(document).ready(function(){
 				}, 850);
 			}, 2000);
 		});
-		// $("#replay").click(function() {
-		// 	$( ".gamePage" ).hide();
-		// 	$(".gameLoss").hide(1000);
-		// 	$(".startGame").show();
-		// });
+		$("#replayGameB").click(function() {
+			document.location.reload();
+		});
 	});
-
-	// $(document).on("keydown", startCount);
-	// $(document).on("keyup", startScore);
 });
