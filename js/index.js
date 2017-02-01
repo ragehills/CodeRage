@@ -5,7 +5,9 @@ $(document).ready(function(){
   		$(".startGame").slideUp();
   		$(".gamePage").show();
 
-  		var time = new Date().getTime();
+  		var time = timeU - timeD;
+  		var timeD = " ";
+  		var timeU = " ";
   		console.log(time);
 		var start = $(".row#2").offset().left;
 		var playerMove = 'middle'
@@ -17,18 +19,19 @@ $(document).ready(function(){
 
 		// players move
 		function backgroundChange(event) {
-			//start timer
 			// console.log("3")
 			if (event.keyCode === 38) {
 		    	$("#playermu").css("background-color", "white")
 		    	$("#playerm").css("background-color", "transparent")
 		    	playerMove = 'up'
+		    	var timeD = new Date().getTime();
+		    	// return timeD;
 		    } else if (event.keyCode === 40) {
 		    	$("#playermd").css("background-color", "white")
 		    	$("#playerm").css("background-color", "transparent")
 		    	playerMove = 'down'
-		    } else if (event.keyCode === 40 && event.keyCode === 38) {
-		    	playerMove = 'middle'
+		    	var timeD = new Date().getTime();
+		    	// return timeD;
 		    } else {
 		    	$("#playermu").css("background-color", "transparent")
 		    	$("#playerm").css("background-color", "white")
@@ -39,17 +42,19 @@ $(document).ready(function(){
 		// players move back
 		$(document).on("keyup", backgroundChangeBack)
 		function backgroundChangeBack(event) {
-			//stop timer
 			// console.log("4")
 			if (event.keyCode === 38) {
 				$("#playerm").css("background-color", "white")
 				$("#playermu").css("background-color", "transparent")
 				playerMove = 'middle'
+				var timeU = new Date().getTime();
+		    	// return timeu;
 		    } else if (event.keyCode === 40) {
 		    	$("#playerm").css("background-color", "white")
 		    	$("#playermd").css("background-color", "transparent")
 		    	playerMove = 'middle'
-
+		    	var timeU = new Date().getTime();
+		    	// return timeU;
 		    } else {
 				$("#playermd").css("background-color", "none")
 				playerMove = 'middle'
