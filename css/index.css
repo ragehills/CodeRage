@@ -67,7 +67,8 @@ li.bullet {
 }
 
 #bullet {
-	z-index: -1;
+	position: relative;
+	z-index: 0;
 }
 
 .startGame, .gameLoss{
