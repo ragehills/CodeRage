@@ -16,7 +16,9 @@ $(document).ready(function(){
 
 		$(document).on("keydown", backgroundChange)
 		$(document).on("keyup", backgroundChangeBack)
-		$("#playerm").css("background-color", "white")
+		$("#playerm").show()
+		$("#playermd").hide()
+		$("#playermu").hide()
 
 		// Bullet animation & refire
 		$(document).on("click", fireBullet);
@@ -25,16 +27,15 @@ $(document).ready(function(){
 	function backgroundChange(event) {
 		timer = setTimeout(endGame, 500);
 		if (event.keyCode === 38) {
-	    	$("#playermu").css("background-color", "white")
-	    	$("#playerm").css("background-color", "transparent")
+			$("#playerm").hide()
+			$("#playermu").show()
 	    	playerMove = 'up'
 	    } else if (event.keyCode === 40) {
-	    	$("#playermd").css("background-color", "white")
-	    	$("#playerm").css("background-color", "transparent")
+	    	$("#playerm").hide()
+			$("#playermd").show()
 	    	playerMove = 'down'
 	    } else {
-	    	$("#playermu").css("background-color", "transparent")
-	    	$("#playerm").css("background-color", "white")
+	    	$("#playerm").show()
 	    	playerMove = 'middle'
 	    }
 	};
@@ -43,9 +44,9 @@ $(document).ready(function(){
 	function backgroundChangeBack() {
 		clearTimeout(timer);
 		playerMove = 'middle';
-		$("#playerm").css("background-color", "white");
-	    $("#playermd").css("background-color", "transparent");
-		$("#playermu").css("background-color", "transparent");
+		$("#playerm").show()
+		$("#playermd").hide()
+		$("#playermu").hide()
 	};
 
 	function fireBullet() {

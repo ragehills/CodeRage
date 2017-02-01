@@ -152,4 +152,20 @@ a:link, a:visited, a:hover, a:active {
 	top: 35vh;
 	bottom: 60vh;
 	left: 47.5vw;
+	color: white;
+}
+
+#playerm {
+	/*background-image: url("../idlep.png");*/
+	z-index: +1
+}
+
+#playermu {
+	/*background-image: url("../jumpingp.png");*/
+	z-index: +1
+}
+
+#playermd {
+	/*background-image: url("../duckingp.png");*/
+	z-index: +1
 }
