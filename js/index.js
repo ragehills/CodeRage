@@ -57,8 +57,10 @@ $(document).ready(function(){
 	function fireBullet() {
 		var start = $(".row#2").offset().left;
 		var finish = $("#g8").offset().left;
+		var rand = ((Math.round(Math.random()*(400)*10) + 200));
+		var check = rand - 50
 		setInterval(function() {
-			var rand = Math.round(Math.random()*(4000) + 200);
+			console.log(check);
 			console.log(rand);
 			$(".bullet").css({left: start}).animate({left: finish}, 1000);
 
@@ -73,8 +75,8 @@ $(document).ready(function(){
 					$("#playermu").hide()
 					endGame();
 				}
-			}, 740);
-		}, 2000);
+			}, check);
+		}, rand);
 	};
 
 	function endGame() {
