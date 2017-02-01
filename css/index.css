@@ -56,12 +56,12 @@ li.bullet {
 	vertical-align: middle;
 	background-image: url("../images/codeBullet.png");
 	/*background-color: green;*/
-	height: 75px;
-	width: 150px;
-	background-size: auto;
+	height: 35px;
+	width: 160px;
 	background-repeat: no-repeat;
-	background-image: cover;
+	background-size: cover;
 	margin-top: 7.5vh;
+	border-radius: 5%;
 }
 
 .startGame, .gameLoss{
