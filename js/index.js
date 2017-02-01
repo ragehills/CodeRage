@@ -16,9 +16,10 @@ $(document).ready(function(){
 
 		$(document).on("keydown", backgroundChange)
 		$(document).on("keyup", backgroundChangeBack)
-		$("#playerm").show()
+		$("#idle").show()
 		$("#playermd").hide()
 		$("#playermu").hide()
+		$("#dizzy").hide()
 
 		// Bullet animation & refire
 		$(document).on("click", fireBullet);
@@ -27,15 +28,15 @@ $(document).ready(function(){
 	function backgroundChange(event) {
 		timer = setTimeout(endGame, 500);
 		if (event.keyCode === 38) {
-			$("#playerm").hide()
+			$("#idle").hide()
 			$("#playermu").show()
 	    	playerMove = 'up'
 	    } else if (event.keyCode === 40) {
-	    	$("#playerm").hide()
+	    	$("#idle").hide()
 			$("#playermd").show()
 	    	playerMove = 'down'
 	    } else {
-	    	$("#playerm").show()
+	    	$("#idle").show()
 	    	playerMove = 'middle'
 	    }
 	};
@@ -44,7 +45,7 @@ $(document).ready(function(){
 	function backgroundChangeBack() {
 		clearTimeout(timer);
 		playerMove = 'middle';
-		$("#playerm").show()
+		$("#idle").show()
 		$("#playermd").hide()
 		$("#playermu").hide()
 	};
@@ -60,6 +61,8 @@ $(document).ready(function(){
 					score++;
 					$('#score').text(score);
 				} else {
+					$("#idle").hide()
+					$("#dizzy").show()
 					endGame();
 				}
 			}, 740);
