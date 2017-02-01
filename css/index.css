@@ -160,5 +160,6 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #playerm, #playermu, #playermd {
+	position: relative;
 	z-index: +2;
 }
