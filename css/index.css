@@ -165,3 +165,8 @@ a:link, a:visited, a:hover, a:active {
 	position: relative;
 	z-index: +2;
 }
+
+#dizzy {
+	position: relative;
+	z-index: +3;
+}

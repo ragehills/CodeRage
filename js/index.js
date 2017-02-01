@@ -61,8 +61,10 @@ $(document).ready(function(){
 					score++;
 					$('#score').text(score);
 				} else {
-					$("#idle").hide()
 					$("#dizzy").show()
+					$("#idle").hide()
+					$("#playermd").hide()
+					$("#playermu").hide()
 					endGame();
 				}
 			}, 740);
@@ -73,5 +75,9 @@ $(document).ready(function(){
 		$(".gamePage").hide(1000);
   		$(".gameLoss").show();
   		$('.scoreBoard').text(score);
-	}
+  		$("#dizzy").show()
+		$("#idle").hide()
+		$("#playermd").hide()
+		$("#playermu").hide()
+}
 });
