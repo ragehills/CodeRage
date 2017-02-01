@@ -58,6 +58,8 @@ $(document).ready(function(){
 		var start = $(".row#2").offset().left;
 		var finish = $("#g8").offset().left;
 		setInterval(function() {
+			var rand = Math.round(Math.random()*(4000) + 200);
+			console.log(rand);
 			$(".bullet").css({left: start}).animate({left: finish}, 1000);
 
 			setTimeout(function() {
