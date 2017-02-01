@@ -61,7 +61,7 @@ $(document).ready(function(){
 				} else {
 					endGame();
 				}
-			}, 850);
+			}, 750);
 		}, 2000);
 	};
 
