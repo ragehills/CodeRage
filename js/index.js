@@ -5,10 +5,8 @@ $(document).ready(function(){
   		$(".startGame").slideUp();
   		$(".gamePage").show();
 
-  		var time = timeU - timeD;
   		var timeD = 0;
   		var timeU = 0;
-  		// console.log(time);
 		var start = $(".row#2").offset().left;
 		var playerMove = 'middle'
 		var finish = $("#g8").offset().left;
@@ -24,13 +22,14 @@ $(document).ready(function(){
 		    	$("#playermu").css("background-color", "white")
 		    	$("#playerm").css("background-color", "transparent")
 		    	playerMove = 'up'
-		    	var timeD = new Date().getTime();
+		    	timeD = new Date().getTime();
+		    	// console.log(timeD)
 		    	// return timeD;
 		    } else if (event.keyCode === 40) {
 		    	$("#playermd").css("background-color", "white")
 		    	$("#playerm").css("background-color", "transparent")
 		    	playerMove = 'down'
-		    	var timeD = new Date().getTime();
+		    	timeD = new Date().getTime();
 		    	// return timeD;
 		    } else {
 		    	$("#playermu").css("background-color", "transparent")
@@ -47,18 +46,25 @@ $(document).ready(function(){
 				$("#playerm").css("background-color", "white")
 				$("#playermu").css("background-color", "transparent")
 				playerMove = 'middle'
-				var timeU = new Date().getTime();
+				timeU = new Date().getTime();
 		    	// return timeu;
 		    } else if (event.keyCode === 40) {
 		    	$("#playerm").css("background-color", "white")
 		    	$("#playermd").css("background-color", "transparent")
 		    	playerMove = 'middle'
-		    	var timeU = new Date().getTime();
+		    	timeU = new Date().getTime();
 		    	// return timeU;
 		    } else {
 				$("#playermd").css("background-color", "none")
 				playerMove = 'middle'
 		    }
+		};
+
+		function compareTime () {
+			if ((timeU).val - (timeD).val > 500);
+				$(".gamePage").hide(1000);
+	  			$(".gameLoss").show();
+	  			$('.scoreBoard').text(score);
 		};
 
 		// Bullet animation & refire
