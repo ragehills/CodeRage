@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$( ".gamePage" ).hide();
 	$( ".gameLoss" ).hide();
-	$(".startGameB").click(function() {
+	$("#startGameB").click(function() {
   		$(".startGame").slideUp();
   		$(".gamePage").show();
 

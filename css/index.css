@@ -73,6 +73,7 @@ li.bullet {
 	height: 100vh;
 	width: 100vw;
 	color: white;
+	text-align: center
 }
 
 /*h1 for start menu and loss menu*/
@@ -82,7 +83,7 @@ li.bullet {
 	font-size: 2em;
 	width: 100vw;
 	height: 100vh;
-	color: #C6B5B8;
+	color: white;
 	display: inline-block;
 	text-align: left;
 	position: absolute;
@@ -92,22 +93,44 @@ li.bullet {
 	left: 40vw;
 }
 
-/*Buttons start menu and loss menu*/
-#startGameB, #replay {
-	font-family: "Menlo-regular"
-	font-size: 2em;
-	border: 0;
-	border: 2em;
-	position: absolute;
-	top: 60vh;
-	right: 40vw;
-	bottom: 30vh;
-	left: 40vw;
-	width: 20vw;
-	height: 5vw;
-	display: inline-block;
-	border-radius: 12.5%;
+#lossTitle {
+	vertical-align: middle;
+	padding-left: 2.5vw;
 }
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: #F99157;
+    position: absolute;
+    padding-left: 5vw;
+	padding-right: 35vw;
+}
+
+#replayGameB {
+	text-align: left;
+	position: absolute;
+	top: 40vh;
+	right: 40vw;
+	bottom: 55vh;
+	left: 40vw;
+	padding: 0;
+	padding-left: 4vw;
+}
+
+/*a:visited {
+    text-decoration: none;
+    color: #F99157;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #F99157;
+}
+
+a:active {
+    text-decoration: underline;
+    color: #F99157;
+}*/
 
 #green {
 	color: #99CC99;
