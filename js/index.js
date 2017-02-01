@@ -64,18 +64,19 @@ $(document).ready(function(){
 			console.log(rand);
 			$(".bullet").css({left: start}).animate({left: finish}, 1000);
 
-			setTimeout(function() {
-				if (playerMove !== 'middle') {
-					score++;
-					$('#score').text(score);
-				} else {
-					$("#dizzy").show()
-					$("#idle").hide()
-					$("#playermd").hide()
-					$("#playermu").hide()
-					endGame();
-				}
-			}, check);
+			setTimeout(bulletCheck, check);
+				function bulletCheck() {
+					if (playerMove !== 'middle') {
+						score++;
+						$('#score').text(score);
+					} else {
+						$("#dizzy").show()
+						$("#idle").hide()
+						$("#playermd").hide()
+						$("#playermu").hide()
+						endGame();
+					}
+				};
 		}, rand);
 	};
 
