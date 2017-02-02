@@ -64,6 +64,7 @@ $(document).ready(function(){
 			var rand = ((Math.round(Math.random()*(400)*8) + 200));
 			console.log(rand);
 			$(".bullet").css({left: start}).animate({left: finish}, 1000);
+			document.getElementById('bulletSound').play()
 
 			setTimeout(function() {
 				if (playerMove !== 'middle') {
