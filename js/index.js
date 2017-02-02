@@ -80,7 +80,7 @@ $(document).ready(function(){
 					$('#spin')[0].play()
 					endGame();
 				}
-			}, 800);
+			}, 900);
 		}, 2000);
 	};
 
