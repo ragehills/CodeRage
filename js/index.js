@@ -60,10 +60,11 @@ $(document).ready(function(){
 	function fireBullet() {
 		var start = $(".row#2").offset().left;
 		var finish = $("#g8").offset().left;
+		var rand = ((Math.round(Math.random()*(400)*8) + 200));
+		var randAnimation = ((Math.round(Math.random()*(200)*8) + 400));
+		var check = randAnimation - 100;
 		interval = setInterval(function() {
-			var rand = ((Math.round(Math.random()*(400)*8) + 200));
-			console.log(rand);
-			$(".bullet").css({left: start}).animate({left: finish}, 1000);
+			$(".bullet").css({left: start}).animate({left: finish}, randAnimation);
 			document.getElementById('bulletSound').play()
 
 			setTimeout(function() {
@@ -79,8 +80,8 @@ $(document).ready(function(){
 					$('#spin')[0].play()
 					endGame();
 				}
-			}, 800);
-		}, 2000);
+			}, check);
+		}, rand);
 	};
 
 	function endGame() {
