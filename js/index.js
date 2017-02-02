@@ -61,8 +61,8 @@ $(document).ready(function(){
 		var start = $(".row#2").offset().left;
 		var finish = $("#g8").offset().left;
 		interval = setInterval(function() {
-			// var rand = ((Math.round(Math.random()*(400)*8) + 200));
-			// console.log(rand);
+			var rand = ((Math.round(Math.random()*(400)*8) + 200));
+			console.log(rand);
 			$(".bullet").css({left: start}).animate({left: finish}, 1000);
 			document.getElementById('bulletSound').play()
 
@@ -95,5 +95,5 @@ $(document).ready(function(){
 		$("#playermd").hide()
 		$("#playermu").hide()
 		$(".bullet").stop('fireBullet')
-}
+	}
 });
