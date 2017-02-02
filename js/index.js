@@ -6,6 +6,7 @@ $(document).ready(function(){
 	var score = 0;
 	var dead = false;
 	var timer;
+	var interval;
 	$("#startGameB").click(startGame);
 	$("#replayGameB").click(function() {
 		document.location.reload();
@@ -54,15 +55,14 @@ $(document).ready(function(){
 			$("#playermu").hide()
 		}
 		playerMove = 'middle';
-
 	};
 
 	function fireBullet() {
 		var start = $(".row#2").offset().left;
 		var finish = $("#g8").offset().left;
-		setInterval(function() {
-			var rand = ((Math.round(Math.random()*(400)*8) + 200));
-			console.log(rand);
+		interval = setInterval(function() {
+			// var rand = ((Math.round(Math.random()*(400)*8) + 200));
+			// console.log(rand);
 			$(".bullet").css({left: start}).animate({left: finish}, 1000);
 			document.getElementById('bulletSound').play()
 
@@ -75,7 +75,8 @@ $(document).ready(function(){
 					$("#idle").hide()
 					$("#playermd").hide()
 					$("#playermu").hide()
-					document.getElementById('spin').play()
+					$('#spin')[0].loop = false;
+					$('#spin')[0].play()
 					endGame();
 				}
 			}, 800);
@@ -84,7 +85,7 @@ $(document).ready(function(){
 
 	function endGame() {
 		dead = true;
-		// document.getElementById('spin').pause()
+		clearInterval(interval);
 		$(document).off("keydown");
 		$(".gamePage").hide(1000);
   		$(".gameLoss").show(1000);
