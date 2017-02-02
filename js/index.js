@@ -1,6 +1,5 @@
 $(document).ready(function(){
-	// 
-	// 
+	
 	$( ".gamePage" ).hide();
 	$( ".gameLoss" ).hide();
 	var playerMove = 'middle';
@@ -75,7 +74,7 @@ $(document).ready(function(){
 					$("#idle").hide()
 					$("#playermd").hide()
 					$("#playermu").hide()
-					// document.getElementById('spin').play()
+					document.getElementById('spin').play()
 					endGame();
 				}
 			}, 800);

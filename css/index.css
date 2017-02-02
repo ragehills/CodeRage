@@ -161,7 +161,7 @@ a:link, a:visited, a:hover, a:active {
 	color: white;
 }
 
-#playerm, #playermu, #playermd {
+#playerm, #playermu, #playermd, #comp {
 	position: relative;
 	z-index: +2;
 }
@@ -181,4 +181,8 @@ a:link, a:visited, a:hover, a:active {
 
 #pageTurn, #jumpSound, #bulletSound, #spin, #hit {
 	display: none;
+}
+
+#comp {
+	margin-top: 13vh;
 }
