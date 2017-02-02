@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	// 
+	// 
 	$( ".gamePage" ).hide();
 	$( ".gameLoss" ).hide();
 	var playerMove = 'middle';
@@ -73,7 +75,7 @@ $(document).ready(function(){
 					$("#idle").hide()
 					$("#playermd").hide()
 					$("#playermu").hide()
-					document.getElementById('spin').play()
+					// document.getElementById('spin').play()
 					endGame();
 				}
 			}, 800);
@@ -82,8 +84,7 @@ $(document).ready(function(){
 
 	function endGame() {
 		dead = true;
-		// $(fireBullet).stop()
-		// $(fireBullet).clearQueue()
+		// document.getElementById('spin').pause()
 		$(document).off("keydown");
 		$(".gamePage").hide(1000);
   		$(".gameLoss").show(1000);
