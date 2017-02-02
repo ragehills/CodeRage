@@ -46,7 +46,7 @@ $(document).ready(function(){
 	    }
 	};
 
-			// players move back
+	// players move back
 	function backgroundChangeBack() {
 		clearTimeout(timer);
 		if (!dead) {
@@ -62,9 +62,9 @@ $(document).ready(function(){
 		var finish = $("#g8").offset().left;
 		var rand = ((Math.round(Math.random()*(400)*8) + 200));
 		var randAnimation = ((Math.round(Math.random()*(200)*8) + 400));
-		var check = randAnimation - 100;
+		var check = randAnimation - 150;
 		interval = setInterval(function() {
-			$(".bullet").css({left: start}).animate({left: finish}, randAnimation);
+			$(".bullet").css({left: start}).animate({left: finish}, 1000);
 			document.getElementById('bulletSound').play()
 
 			setTimeout(function() {
@@ -80,9 +80,16 @@ $(document).ready(function(){
 					$('#spin')[0].play()
 					endGame();
 				}
-			}, check);
-		}, rand);
+			}, 800);
+		}, 2000);
 	};
+
+	function randomGenerator (){
+        var rand = ((Math.round(Math.random()*(400)*8) + 200));
+		var randAnimation = ((Math.round(Math.random()*(200)*8) + 400));
+		var check = randAnimation - 150;
+		fireBullet(rand, randAnimation, check);
+    }
 
 	function endGame() {
 		dead = true;
